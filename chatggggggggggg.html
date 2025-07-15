@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Shopping Cart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+    }
+
+    .cart-btn {
+      position: relative;
+      background: #222;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: red;
+      color: white;
+      border-radius: 50%;
+      padding: 2px 8px;
+      font-size: 14px;
+    }
+
+    .product {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .product button {
+      background: green;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #cartModal {
+      position: fixed;
+      top: 60px;
+      right: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      padding: 20px;
+      display: none;
+      width: 300px;
+      z-index: 10;
+    }
+
+    #cartItems li {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <button class="cart-btn" onclick="toggleCart()">
+      🛒 Cart <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+
+  <div class="product">
+    <h3>Black T-shirt</h3>
+    <p>₦4,000</p>
+    <button onclick="addToCart('Black T-shirt', 4000)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <h3>Blue Jeans</h3>
+    <p>₦8,500</p>
+    <button onclick="addToCart('Blue Jeans', 8500)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <h3>White Sneakers</h3>
+    <p>₦12,000</p>
+    <button onclick="addToCart('White Sneakers', 12000)">Add to Cart</button>
+  </div>
+
+  <!-- Cart Modal -->
+  <div id="cartModal">
+    <h4>Your Cart</h4>
+    <ul id="cartItems"></ul>
+    <p><strong>Total: ₦<span id="cartTotal">0</span></strong></p>
+  </div>
+
+     <button onclick="addToCart('Blue Jeans', 8500)">pay</button>
+
+
+  <script>
+    let cart = [];
+
+    function addToCart(productName, price) {
+      cart.push({ name: productName, price: price });
+      updateCartCount();
+      updateCartDisplay();
+    }
+
+    function updateCartCount() {
+      document.getElementById('cartCount').innerText = cart.length;
+    }
+
+    function updateCartDisplay() {
+      const cartItems = document.getElementById('cartItems');
+      const cartTotal = document.getElementById('cartTotal');
+      cartItems.innerHTML = '';
+
+      let total = 0;
+      cart.forEach(item => {
+        total += item.price;
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - ₦${item.price}`;
+        cartItems.appendChild(li);
+      });
+
+      cartTotal.innerText = total;
+    }
+
+    function toggleCart() {
+      const modal = document.getElementById('cartModal');
+      modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cart - Clothing Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 20px;
+      background-image: url(/top.jpg);
+     background-size: 100%;
+      background-repeat: no-repeat;
+    }
+
+
+    
+header {
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cart {
+  font-size: 1.2rem;
+}
+
+.hero {
+  background: url('https://via.placeholder.com/1200x400?text=Summer+Collection') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.btn {
+  background: #ff6f61;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.categories {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.category {
+  width: 300px;
+  border: 1px solid #ddd;
+  padding: 1rem;
+}
+
+.category img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+    .container {
+      max-width: 800px;
+      background: #fff;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      text-align: left;
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #eee;
+    }
+    .total {
+      text-align: right;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    .payment-form input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .payment-form button {
+      background-color: #27ae60;
+      color: white;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .payment-form button:hover {
+      background-color: #219150;
+    }
+  </style>
+</head>
+<body>
+
+    
+  <header>
+    <div class="logo"><a href="/Homepage.html" style="color: white; text-decoration: none;"> Essential Stiches </a></div>
+    <nav>
+      <ul>
+       
+        <li><a href="#" style="padding-left: 150px; font-size: 32px;">Cart</a></li>
+               <li><a href="/order form.html" style="padding-left: 180px; font-size: 22px;">Login /</a><a href="/sign up.html" style="font-size: 22px;"> Sign Up</a></li>
+
+      </ul>
+    </nav>
+   <a href="/cart.html"> <div class="cart">🛒</div></a>
+  </header>
+
+  <div class="container">
+    <h2>Your Cart</h2>
+    <table id="cart-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Qty</th>
+          <th>Price</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items">
+        <!-- JS will fill this -->
+      </tbody>
+    </table>
+    <div class="total" id="total-price">Total: $0.00</div>
+
+    <h3>Payment Information</h3>
+    <div class="payment-form">
+      <input type="text" id="card-number" placeholder="Card Number" required>
+      <input type="text" id="expiry-date" placeholder="MM/YY" required>
+      <input type="text" id="cvv" placeholder="CVV" required>
+      <button onclick="submitPayment()">Pay Now</button>
+    </div>
+  </div>
+
+  <script>
+    // Sample cart data
+    const cart = [
+      { name: 'T-Shirt', qty: 2, price: 20 },
+      { name: 'Jeans', qty: 1, price: 45 },
+      { name: 'Sneakers', qty: 1, price: 60 }
+    ];
+
+    const cartItemsContainer = document.getElementById('cart-items');
+    const totalPriceElement = document.getElementById('total-price');
+    let total = 0;
+
+    cart.forEach(item => {
+      const subtotal = item.qty * item.price;
+      total += subtotal;
+
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${item.name}</td>
+        <td>${item.qty}</td>
+        <td>$${item.price}</td>
+        <td>$${subtotal}</td>
+      `;
+      cartItemsContainer.appendChild(row);
+    });
+
+    totalPriceElement.textContent = `Total: $${total.toFixed(2)}`;
+
+    function submitPayment() {
+      const cardNumber = document.getElementById('card-number').value;
+      const expiry = document.getElementById('expiry-date').value;
+      const cvv = document.getElementById('cvv').value;
+
+      if (cardNumber && expiry && cvv) {
+        alert('Payment Successful! Thank you for your purchase.');
+      } else {
+        alert('Please fill in all payment details.');
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

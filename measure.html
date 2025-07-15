@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Measurement Form</title>
+  <style>
+    body {
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.6;
+    background-image: url(/top.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 800px;
+    background-color: black;
+
+    }
+
+
+     
+  header {
+    background:black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .cart {
+    font-size: 1.8rem;
+    position: relative;
+  }
+  
+.spa{
+  display: block;
+  width: 23px;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  background-color: red;
+  text-align: center;
+  border-radius: 50%;
+  padding-bottom: 25px;
+  position: absolute;
+  top: 6%;
+  right: 20px;
+}
+
+
+
+
+  .hero {
+    background: url('https://via.placeholder.com/1200x400?text=Summer+Collection') no-repeat center center/cover;
+  color: white;
+    text-align: center;
+    padding: 2rem 2rem;
+  
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  .hero p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+  }
+
+.ss{
+    height: 180px;
+    width: 200px;
+    border-radius: 50%;
+    
+
+  }
+
+.new{
+ display: flex;
+ color: white;
+}
+.new ul{
+  list-style-type: none;
+  display: flex;
+  margin-left: 2%;
+  
+}
+
+.herro{
+  margin-top: 5%;
+  margin-left: 2%;
+  
+  
+}
+.sss{
+  height: 200px;
+    width: 200px;
+    border-radius: 10%;
+    margin-left: 1%;
+    position: relative;
+}
+.tt{
+  position: absolute;
+ top: 180%;
+  color: white;
+  margin-left: 5%;
+  font-size: 20px;
+}
+.yo{
+  position: absolute;
+ top: 240%;
+  color: white;
+ 
+}
+
+
+  
+  .btn {
+    background: #ff6f61;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+   margin-left: 45%;
+   
+  }
+  
+  .categories {
+    padding: 3rem 2rem;
+    text-align: center;
+    color: white;
+  }
+  
+  .category-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .category {
+    width: 300px;
+    border: 1px solid #ddd;
+    padding: 1rem;
+  }
+  
+  .category img {
+    width: 100%;
+    height: auto;
+  }
+  
+  footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+  }
+
+
+    .container {
+      max-width: 1000px;
+      background: white;
+      margin: 10px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      margin-top: 15px;
+      font-weight: bold;
+      font-size: 20px;
+      
+      
+    }
+
+    input, select, textarea {
+      width: 35%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      gap: 10px;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      background-color: black;
+      color: white;
+      padding: 12px;
+      border: none;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    .result {
+      margin-top: 20px;
+      background: #e8ffe8;
+      padding: 10px;
+      border-radius: 8px;
+      display: none;
+    }
+
+
+    
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+
+
+
+.f1{
+  border:2px solid black;
+  height: 250px; 
+  border-radius:10px; 
+  width: 200px;
+   background-color: azure;
+   box-shadow: 0px 5px 10px rgb(63, 62, 62);
+  margin-left:  5px;
+  
+ 
+}
+
+img {
+  transition: transform 0.2s ease;
+ 
+}
+
+img:hover {
+  transform: scale(1.1);
+  margin-left: 20px ;
+}
+.writing{
+  height: 60px;
+   padding: 10px; 
+   background-color: black;
+   color: white;
+   text-decoration: none;
+   font-size: 20px;
+   border-radius: 10px;
+   margin-left: 100px;
+}
+
+
+ .footer {
+  background-color: #111;
+  color: #f1f1f1;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3, .footer-section h4 {
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  margin-right: 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  font-size: 14px;
+}
+
+
+  </style>
+</head>
+<body>
+
+
+     <header>
+    <div class="logo"><a href="/Homepage.html" style="color: white; text-decoration: none;"> Essential Stiches </a></div>
+    <nav>
+      <ul>
+       
+        <li><a href="#" style="padding-left: 180px; font-size: 32px;">Mesurements</a></li>
+        <li><a href="/order form.html" style="padding-left: 180px; font-size: 22px;">Login /</a><a href="/sign up.html" style="font-size: 22px;"> Sign Up</a></li>
+      </ul>
+    </nav>
+    <div class="cart">🛒</div>
+  </header>
+  
+    
+     </div>
+  </header>
+
+  <div class="container">
+    <h2  style="font-size: 30px;">Customer Measurement Form</h2>
+    <form id="measurementForm">
+      <label for="name" >Full Name</label>
+      <input type="text" id="name" required>
+
+      <label for="email" style="padding-left: 5%;">Email</label>
+      <input type="email" id="email" required><br style="margin-bottom: 2%;">
+
+      <label for="height">Height (cm)</label>
+      <input type="number" id="height" required>
+
+      <label for="weight" style="padding-left: 3%; ">Weight (kg)</label>
+      <input type="number" id="weight" required style="width: 30%;">
+<br style="margin-bottom: 2%;">
+
+
+      <label for="bust">Bust/Chest (inches)</label>
+      <input type="number" id="bust" required>
+
+      <label for="waist">Waist (inches)</label>
+      <input type="number" id="waist" required style="width: 24%;">
+<br style="margin-bottom: 2%;">
+
+
+      <label for="hips">Hips (inches)</label>
+      <input type="number" id="hips" required>
+
+      <label for="color">Preferred Color</label>
+      <input type="text" id="color" placeholder="e.g. Black, Blue, Wine" required style="width: 29%;">
+<br style="margin-bottom: 2%;">
+
+
+      <label for="notes" style="margin-left: 15%;">Additional Notes</label>
+      <textarea id="notes" rows="4" placeholder="Any special requests?"></textarea>
+
+      <button type="submit">Submit Measurements</button>
+    </form>
+
+    <div class="result" id="resultBox"></div>
+  </div>
+
+
+<footer>
+    <p>&copy; 2025 Essential Stiches. All rights reserved.</p>
+  </footer>
+   
+  
+  
+   <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Essential Stiches</h3>
+      <p>Style that speaks for you. Shop the latest trends with ease.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/shop">Shop</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/privacy">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="icons/facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="icons/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="icons/twitter.svg" alt="Twitter"></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 Essential Stiches. All rights reserved.
+  </div>
+</footer>
+</body>
+</html>
+
+
+  <script>
+    const form = document.getElementById('measurementForm');
+    const resultBox = document.getElementById('resultBox');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const height = document.getElementById('height').value;
+      const weight = document.getElementById('weight').value;
+      const bust = document.getElementById('bust').value;
+      const waist = document.getElementById('waist').value;
+      const hips = document.getElementById('hips').value;
+      const color = document.getElementById('color').value;
+
+      resultBox.style.display = 'block';
+      resultBox.innerHTML = `
+        <strong>Thank you, ${name}!</strong><br>
+        Your measurements have been received.<br>
+        <ul>
+          <li>Height: ${height} cm</li>
+          <li>Weight: ${weight} kg</li>
+          <li>Bust/Chest: ${bust} in</li>
+          <li>Waist: ${waist} in</li>
+          <li>Hips: ${hips} in</li>
+          <li>Preferred Color: ${color}</li>
+        </ul>
+      `;
+      form.reset();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up | eCommerce</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      background-image: url(/shirt-mockup-concept-with-plain-clothing.jpg);
+ background-size: 100%;
+ background-repeat: no-repeat;
+    }
+
+
+    header {
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .cart {
+    font-size: 1.2rem;
+  }
+    .container {
+      max-width: 400px;
+      height: 450px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px black;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    input[type="text"], input[type="email"], input[type="password"] {
+      width: 90%;
+      padding: 12px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color:black;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+
+     .footer {
+  background-color: #111;
+  color: #f1f1f1;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3, .footer-section h4 {
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  margin-right: 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  font-size: 14px;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"><a href="/Homepage.html" style="color: white; text-decoration: none;"> Essential Stiches </a></div>
+    <nav>
+      <ul>
+       
+        <li><a href="#" style="padding-left: 220px; font-size: 32px;">Sign Up</a></li>
+        <li><a href="/order form.html" style="padding-left: 350px; font-size: 22px;">Login</a></li>
+      </ul>
+    </nav>
+    <div class="cart">🛒</div>
+  </header>
+
+  <div class="container">
+    <h2>Create Your Account</h2>
+    <div id="errorMsg" class="error"></div>
+    <form id="signupForm">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+      <a href="order form.html"><button type="submit" style="margin-bottom: 5%;">Sign Up</button></a>
+      <br >
+      <div><a href=""  style="color: red; text-decoration: none;">Forgetten Password?</a>
+      <a href="/order form.html" style="text-decoration: none; margin-left: 40%; color: #218838; "><b> Login </b></a></div>
+      
+      
+      <footer  style="margin-top: 10%; padding-left: 20px; ">
+     <i>  <p>&copy; 2025 Essential Stiches. All rights reserved.</p></i> 
+      </footer>
+    </form>
+  </div>
+
+  
+   <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Essential Stiches</h3>
+      <p>Style that speaks for you. Shop the latest trends with ease.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/shop">Shop</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/privacy">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="icons/facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="icons/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="icons/twitter.svg" alt="Twitter"></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 Essential Stiches. All rights reserved.
+  </div>
+</footer>
+  
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const username = document.getElementById("username").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+      const errorMsg = document.getElementById("errorMsg");
+
+      if (!username || !email || !password || !confirmPassword) {
+        errorMsg.textContent = "Please fill in all fields.";
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        errorMsg.textContent = "Passwords do not match.";
+        return;
+      }
+
+      if (password.length < 6) {
+        errorMsg.textContent = "Password must be at least 6 characters.";
+        return;
+      }
+
+      // Success simulation
+      alert("Account created successfully!");
+      errorMsg.textContent = "";
+      document.getElementById("signupForm").reset();
+    });
+  </script>
+</body>
+</html>
