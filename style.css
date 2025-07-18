@@ -5,8 +5,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(/shirt-mockup-concept-with-plain-clothing.jpg);
-    background-repeat: no-repeat;
+    background-image: url("shirt-mockup-concept-with-plain-clothing.jpg");
+    background-size: contain;
+    background-repeat: repeat;
     background-size: 100%;
   }
 
